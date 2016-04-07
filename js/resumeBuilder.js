@@ -80,7 +80,7 @@ var work = {
         {
         "Position": "Software Engineer",
         "Employer": "HCL Technologies",
-        "location": ["Chennai,India"],
+        "location": "Chennai,India",
         "Dates": "August 2011 - May 2012",
         "Description": "Worked for Oracle peoplesoft technology.I have done development, support as well as testing"
         },
@@ -102,7 +102,7 @@ var education = {
         "name": "Enspiral Development Academy",
         "subjects": "Web Development",
         "years": "2016",
-        "location": ["Wellington, New Zealand"],
+        "location": "Wellington, New Zealand",
         "major": "HTML, CSS, Javascript"
         }, 
         {
@@ -214,5 +214,17 @@ education.displayEducation();
 
 
 
+$('#mapDiv').append(internationalizeButton);
 
 $('#mapDiv').append(googleMap);
+
+function locationizer(work_obj) {
+    'use strict';
+    var locationArray = [];
+     locationArray.forEach(function (work_obj) {
+         var newLocation = work_obj.jobs[job].location;
+         locationArray.push(newLocation);
+        console.log(work_obj);
+   });
+    return locationArray;
+ }
